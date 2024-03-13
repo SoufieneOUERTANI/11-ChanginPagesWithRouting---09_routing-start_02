@@ -45,3 +45,21 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     <!-- replace the component selector by router-outlet directive, to load the component associated with the route entered, at that place  -->
     <router-outlet></router-outlet>
 
+
+
+
+## 131. Navigating with Router Links => href, routerLink
+
+    Navigating by clicking a page element => Associating a link in the adress bar
+
+### by href => refreshing the page at each click
+        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/servers">Servers</a></li>
+        <li role="presentation"><a href="/users">Users</a></li>
+
+### by routerLink => avoiding refreshing the page at each click
+
+        <li role="presentation" class="active"><a routerLink="/">Home</a></li>
+        <li role="presentation"><a routerLink="/servers">Servers</a></li>
+        <li role="presentation"><a [routerLink]="['/users']">Users</a></li>
+
