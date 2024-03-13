@@ -63,3 +63,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         <li role="presentation"><a routerLink="/servers">Servers</a></li>
         <li role="presentation"><a [routerLink]="['/users']">Users</a></li>
 
+## 132. Understanding Navigation Paths : ".", "..", "/", ""
+
+    The relative path can start with  "." or ".."
+    The absolute path can be loaded by "/" from any level
+    At the root level(router-outlet), the absolute path can start with either "" or "/"
+
+    Can "" be a relative path ?

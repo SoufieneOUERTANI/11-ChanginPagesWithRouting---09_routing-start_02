@@ -10,6 +10,26 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
+    <a routerLink="servers">servers relative wrong path</a>
+    <br>
+    <a routerLink=".">servers relative path</a>
+    <br>
+    <a routerLink="../servers">servers relative path</a>
+    <br>
+    <a routerLink="/servers">servers absolute path</a>
+    <br>
+    <a routerLink="../users">users relative path</a>
+    <br>
+    <a routerLink="/users">users absolute path</a>
+    <br>
+    <a routerLink="../">home relative path</a>
+    <br>
+    <a routerLink="..">home relative path</a>
+    <br>
+    <a routerLink="/">home absolute path</a>
+    <br>
+    <a routerLink="">home absolute path</a>
+    <br>
     <app-edit-server></app-edit-server>
     <hr>
     <app-server></app-server>
