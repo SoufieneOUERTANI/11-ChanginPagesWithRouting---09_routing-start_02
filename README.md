@@ -72,3 +72,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     Can "" be a relative path ?
 
 ## 132 bis.Remake order
+
+## 133. Styling Active Router Links : routerLinkActive, routerLinkActiveOptions
+
+    routerLinkActive
+
+    <!--  For the  root path ""-->
+    [routerLinkActiveOptions]="{exact:true}
