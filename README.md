@@ -79,3 +79,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
     <!--  For the  root path ""-->
     [routerLinkActiveOptions]="{exact:true}
+
+## 134. Navigating Programmatically : Router, navigate  
+
+    constructor(private router : Router) { }
+    this.router.navigate(['/servers']);
