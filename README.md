@@ -70,3 +70,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     At the root level(router-outlet), the absolute path can start with either "" or "/"
 
     Can "" be a relative path ?
+
+## 132 bis.Remake order
