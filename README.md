@@ -124,3 +124,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     this.user = { id : this.route.snapshot.params['id'], name : this.route.snapshot.params['name']};
     
     http://localhost:4200/users/123/nameExample
+
+## 138. Fetching Route Parameters Reactively : ActivatedRoute, params.subscribe
+
+    constructor(private route : ActivatedRoute) { }
+    
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.user.id=params['id'];
+        this.user.name=params['name'];
+      }
+    )
+
