@@ -84,3 +84,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
     constructor(private router : Router) { }
     this.router.navigate(['/servers']);
+
+## 135. Using Relative Paths in Programmatic Navigation : route : ActivatedRoute, {relativeTo:this.route}
+
+    Unlike the routerLink, the Router's navigate method does not know in which component you are
+    So it will consider the router as absolute path
+    Unless you specify the relativeTo option
+
+        private route : ActivatedRoute
+        {relativeTo:this.route}
+
+    // absolute
+    // => /servers
+    this.router.navigate(['servers']);
+
+    // absolute
+    // => /servers
+    this.router.navigate(['/servers']);
+
+    // relative
+    // => servers/servers
+    this.router.navigate(['servers'], {relativeTo:this.route})
+
+    // absolute
+    // => /servers
+    this.router.navigate(['/servers'], {relativeTo:this.route})
