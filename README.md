@@ -109,3 +109,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     // absolute
     // => /servers
     this.router.navigate(['/servers'], {relativeTo:this.route})
+
+## 136. Passing Parameters to Routes
+
+    {path: 'users:id', component : UserComponent},
+    http://localhost:4200/users/1
+    http://localhost:4200/users/nothing
