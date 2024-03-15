@@ -136,3 +136,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
       }
     )
 
+## 139. An Important Note about Route Observables : unsubscribe to a params subscribtion on Object destruction
+    
+    paramsSubscription : Subscription;
+    
+    this.paramsSubscription = this.route.params.subscribe(...
+
+    ngOnDestroy(): void {
+        this.paramsSubscription.unsubscribe;
+    }
