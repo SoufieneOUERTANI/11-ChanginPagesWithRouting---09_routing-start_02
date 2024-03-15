@@ -115,3 +115,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     {path: 'users:id', component : UserComponent},
     http://localhost:4200/users/1
     http://localhost:4200/users/nothing
+
+## 137. Fetching Route Parameters : ActivatedRoute, snapshot.params
+
+    {path: 'users/:id/:name', component : UserComponent},
+
+    constructor(private route : ActivatedRoute) { }
+    this.user = { id : this.route.snapshot.params['id'], name : this.route.snapshot.params['name']};
+    
+    http://localhost:4200/users/123/nameExample
