@@ -145,3 +145,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     ngOnDestroy(): void {
         this.paramsSubscription.unsubscribe;
     }
+
+## 140. Passing Query Parameters and Fragments : queryParams, fragment
+
+    {path : 'servers/:id/edit', component : EditServerComponent},
+    
+    this.router.navigate(["/servers", id, 'edit'], {queryParams :{allowEdit:1, defaultEdit:'0'}, fragment:"loading"});
+
+    [routerLink]="['/servers',1,'edit']"
+    [queryParams]="{allowEdit:1, defaultEdit:0}"
+    [fragment]="'loading'"
