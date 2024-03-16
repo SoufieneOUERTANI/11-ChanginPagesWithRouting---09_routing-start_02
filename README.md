@@ -167,3 +167,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     this.route.fragment.subscribe();
 
 ## 142. Practicing and some Common Gotchas
+
+## 143. Setting up Child (Nested) Routes : children, router-outlet
+
+
+    {path : 'users', component : UsersComponent, children :
+        [  
+            {path: ':id/:name', component : UserComponent},
+        ]
+    }
+
+    <router-outlet></router-outlet>
