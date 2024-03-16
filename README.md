@@ -165,3 +165,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     console.log(this.route.snapshot.fragment);
     this.route.queryParams.subscribe();
     this.route.fragment.subscribe();
+
+## 142. Practicing and some Common Gotchas
