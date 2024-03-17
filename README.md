@@ -204,3 +204,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
 
     {path : 'servers',canActivate: [AuthGuard], component : ServersComponent, children:
+
+## 151. Protecting Child (Nested) Routes with canActivateChild : canActivateChild
+
+    canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+
+    {path : 'servers',canActivateChild: [AuthGuard], component : ServersComponent, children:
