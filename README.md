@@ -193,3 +193,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   // Make sure is the last path in this list
   {path : '**', redirectTo:'/not-found'}
 
+## 147. Important: Redirection Path Matching : pathMatch: 'full'
+
+## 148. Outsourcing the Route Configuration : RouterModule
