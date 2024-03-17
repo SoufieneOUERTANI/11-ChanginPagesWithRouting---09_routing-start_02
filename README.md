@@ -210,3 +210,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
 
     {path : 'servers',canActivateChild: [AuthGuard], component : ServersComponent, children:
+
+## 152. Using a Fake Auth Service
+
+    
