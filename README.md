@@ -186,3 +186,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     this.router.navigate(['edit'], {relativeTo:this.route, queryParamsHandling :'preserve'});
 
 
+## 146. Redirecting and Wildcard Routes : path : '**', redirectTo
+
+  {path : 'not-found', component:PageNotFoundComponent},
+  {path : 'something', redirectTo:'/not-found'},
+  // Make sure is the last path in this list
+  {path : '**', redirectTo:'/not-found'}
+
