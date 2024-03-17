@@ -178,3 +178,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     }
 
     <router-outlet></router-outlet>
+
+## 144. Using Query Parameters - Practice
+
