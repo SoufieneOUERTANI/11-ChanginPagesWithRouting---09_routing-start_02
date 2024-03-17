@@ -188,11 +188,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 146. Redirecting and Wildcard Routes : path : '**', redirectTo
 
-  {path : 'not-found', component:PageNotFoundComponent},
-  {path : 'something', redirectTo:'/not-found'},
-  // Make sure is the last path in this list
-  {path : '**', redirectTo:'/not-found'}
+    {path : 'not-found', component:PageNotFoundComponent},
+    {path : 'something', redirectTo:'/not-found'},
+    // Make sure is the last path in this list
+    {path : '**', redirectTo:'/not-found'}
 
 ## 147. Important: Redirection Path Matching : pathMatch: 'full'
 
 ## 148. Outsourcing the Route Configuration : RouterModule
+
+## 150. Protecting Routes with canActivate : CanActivate
+
+    export class AuthGuard implements CanActivate{
+
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+
+    {path : 'servers',canActivate: [AuthGuard], component : ServersComponent, children:
