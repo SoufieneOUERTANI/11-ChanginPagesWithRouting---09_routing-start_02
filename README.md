@@ -181,3 +181,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 144. Using Query Parameters - Practice
 
+## 145. Configuring the Handling of Query Parameters
+    
+    this.router.navigate(['edit'], {relativeTo:this.route, queryParamsHandling :'preserve'});
+
+

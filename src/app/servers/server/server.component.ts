@@ -28,6 +28,6 @@ export class ServerComponent implements OnInit {
     // // Absolute
     // this.router.navigate(['servers/'+ [this.server.id] +'/edit']);
     // Relative
-    this.router.navigate(['edit'], {relativeTo:this.route});
+    this.router.navigate(['edit'], {relativeTo:this.route, queryParamsHandling :'preserve'});
   }
 }
