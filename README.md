@@ -213,4 +213,38 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## 152. Using a Fake Auth Service
 
+## 153. Controlling Navigation with canDeactivate : CanDeactivate
+
+    export interface CanComponentDesactivate{
+        canDeactivate : () => Observable<boolean> | Promise<boolean> | boolean
+    }
+    export class CanDeactivateGuard implements CanDeactivate<CanComponentDesactivate>{
+        canDeactivate(component: CanComponentDesactivate, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+            return component.canDeactivate();
+        }
+    }
+
+
+
+    canDeactivate(): boolean | Promise<boolean> | Observable<boolean> {
+        if (!this.allowEdit) {
+        return true;
+        }
+        if (
+        (this.server.name !== this.serverName || this.server.status !== this.serverStatus)
+        &&
+        !this.changesSaved
+        ) {
+        return confirm('Do you want to discard the changes?')
+        } else {
+        return true;
+        }
+    }
+
     
+    
+    providers: [ServersService, AuthService, AuthGuard, CanDeactivateGuard],
+
+
+
+    {path: ':id/edit', component : EditServerComponent, canDeactivate : [CanDeactivateGuard]}
