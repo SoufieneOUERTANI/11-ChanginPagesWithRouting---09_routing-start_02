@@ -259,3 +259,28 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         this.errorMessage = data['message']
       }
     );
+
+## 155. Resolving Dynamic Data with the resolve Guard : Resolve, Data, ActivatedRouteSnapshot, RouterStateSnapshot, resolve
+    
+    @Injectable()
+    export class ServerResolver implements Resolve<Server>{
+
+        constructor(private servicesServer :ServersService){}
+        
+        resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Server | Observable<Server> | Promise<Server> {
+            return this.servicesServer.getServer(+route.params['id']);
+        }
+        
+    }
+
+
+
+    {path: ':id', component : ServerComponent, resolve : {server:ServerResolver}},
+
+
+
+    this.route.data.subscribe(
+      (data :Data) => {
+        this.server =data['server'];
+      }
+    )
