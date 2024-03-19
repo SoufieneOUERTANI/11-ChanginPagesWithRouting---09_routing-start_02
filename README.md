@@ -248,3 +248,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
     {path: ':id/edit', component : EditServerComponent, canDeactivate : [CanDeactivateGuard]}
+
+## 154. Passing Static Data to a Route
+
+    {path : 'not-found', component:ErrorPageComponent, data : {message : 'Page not found !'}},
+
+    this.errorMessage = this.route.snapshot.data['message'];
+    this.route.data.subscribe(
+      (data:Data) => {
+        this.errorMessage = data['message']
+      }
+    );
